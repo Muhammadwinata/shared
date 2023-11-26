@@ -8,7 +8,7 @@ public class SharedPrefManager {
     SharedPreferences.Editor editor;
 
         public SharedPrefManager(Context context) {
-        sharedPreferences = context.getSharedPreferences("com.example.sharedpreferences", context.MODE_PRIVATE);
+        sharedPreferences = context.getSharedPreferences("com.example.shared", context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
         setAsDefaultValue();
         }
@@ -35,9 +35,6 @@ public class SharedPrefManager {
             editor.putBoolean("sp_islogin", value);
             editor.commit();
         }
-
-
-
         public String getString() {
             return sharedPreferences.getString("sp_string", "");
         }

@@ -71,10 +71,11 @@ public class MainActivity extends AppCompatActivity {
                             String spPassword = sharedPrefManager.getPassword();
 
                             Log.d("username", "user"+username);
-                            Log.d("password", "user"+password);
+                            Log.d("password", "pass"+password);
 
                             if (username.equals(spUsername) && password.equals(spPassword)) {
                                 Intent i = new Intent(MainActivity.this, HomeActivity.class);
+                                sharedPrefManager.saveIsLogin(true);
                                 finishAffinity();
                                 startActivity(i);
                             } else {
