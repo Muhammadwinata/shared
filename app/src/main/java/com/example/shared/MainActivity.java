@@ -2,7 +2,7 @@ package com.example.shared;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import  android.content.Intent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
-import java.util.concurrent.Delayed;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             etUsername = findViewById(R.id.etUsername);
             etPassword = findViewById(R.id.etPassword);
             btnLogin = findViewById(R.id.btnLogin);
-            pbLogin = findViewById(R.id.pblogin);
+            pbLogin = findViewById(R.id.pbLogin);
             ivLogin = findViewById(R.id.ivLogin);
 
             login();
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         finishAffinity();
     }
 
-    private  void login() {
+    private void login() {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 if (username.isEmpty() || password.isEmpty()) {
                     pbLogin.setVisibility(View.GONE);
                     ivLogin.setVisibility(View.VISIBLE);
-                    Toast.makeText(MainActivity.this, "Username dan password tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Username dan Password tidak boleh kosong", Toast.LENGTH_SHORT).show();
                 } else {
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -88,6 +86,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }
