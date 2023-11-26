@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 pbLogin.setVisibility(View.VISIBLE);
                 ivLogin.setVisibility(View.GONE);
 
-                if (username.isEmpty() ||password.isEmpty()) {
+                if (username.isEmpty() || password.isEmpty()) {
                     pbLogin.setVisibility(View.GONE);
                     ivLogin.setVisibility(View.VISIBLE);
                     Toast.makeText(MainActivity.this, "Username dan password tidak boleh kosong", Toast.LENGTH_SHORT).show();
